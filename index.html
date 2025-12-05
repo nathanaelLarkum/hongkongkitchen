@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hong Kong Kitchen | Best Chinese Takeaway in Uxbridge</title>
+    <meta name="description" content="Authentic Peking & Chinese Cuisine in Uxbridge. Order Set Dinners and Chef Specials. Call 01895 813040.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'hk-red': '#7f1d1d', // Deep traditional red
+                        'hk-red-light': '#991b1b',
+                        'hk-gold': '#fbbf24', // Amber/Gold
+                        'hk-gold-dark': '#d97706',
+                        'hk-dark': '#1c1917', // Warm black
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Cinzel', 'serif'], // Traditional refined look
+                    },
+                    backgroundImage: {
+                        'pattern': "url('https://www.transparenttextures.com/patterns/black-scales.png')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Utilities */
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .text-shadow-sm {
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-gray-800 font-sans antialiased">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-hk-dark/95 backdrop-blur-sm border-b-2 border-hk-gold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-bowl-food text-hk-gold text-2xl"></i>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-white text-xl md:text-2xl font-bold tracking-wide leading-none">Hong Kong</span>
+                        <span class="font-serif text-hk-gold text-lg md:text-xl font-bold tracking-widest leading-none">Kitchen</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-white hover:text-hk-gold font-bold transition">Home</a>
+                    <a href="#offers" class="text-white hover:text-hk-gold font-bold transition">Special Offers</a>
+                    <a href="#menu" class="text-white hover:text-hk-gold font-bold transition">Menu</a>
+                    <a href="#contact" class="text-white hover:text-hk-gold font-bold transition">Contact</a>
+                    <a href="tel:01895813040" class="bg-hk-gold hover:bg-yellow-400 text-hk-dark px-6 py-2 rounded-full font-bold transition transform hover:scale-105 shadow-lg animate-pulse">
+                        <i class="fa-solid fa-phone mr-2"></i> Order Now
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-hk-gold focus:outline-none">
+                        <i class="fa-solid fa-bars text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-hk-dark border-t border-gray-700">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block text-white py-2 hover:text-hk-gold border-b border-gray-700">Home</a>
+                <a href="#offers" class="block text-white py-2 hover:text-hk-gold border-b border-gray-700">Special Offers</a>
+                <a href="#menu" class="block text-white py-2 hover:text-hk-gold border-b border-gray-700">Menu</a>
+                <a href="#contact" class="block text-white py-2 hover:text-hk-gold border-b border-gray-700">Find Us</a>
+                <a href="tel:01895813040" class="block w-full text-center mt-4 bg-hk-gold text-hk-dark py-3 rounded font-bold">
+                    <i class="fa-solid fa-phone mr-2"></i> Call 01895 813040
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-[85vh] flex items-center justify-center bg-black">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Authentic Chinese Food" class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black/80"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
+            <div class="inline-block border-b-4 border-hk-gold mb-4 pb-1">
+                <span class="text-hk-gold font-bold tracking-wider uppercase text-sm md:text-base">Established in Uxbridge</span>
+            </div>
+            <h1 class="font-serif text-5xl md:text-7xl font-bold text-white mb-6 text-shadow leading-tight">
+                The Best Chinese <br> <span class="text-hk-gold">Cuisine in town</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 font-light text-shadow-sm">
+                Fresh ingredients, authentic Peking style, delivered hot to your door.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:01895813040" class="group bg-hk-red hover:bg-red-700 text-white px-8 py-4 rounded-full text-xl font-bold transition-all shadow-[0_0_20px_rgba(185,28,28,0.5)] border-2 border-hk-red">
+                    Call to Order: <span class="group-hover:text-yellow-200">01895 813040</span>
+                </a>
+                <a href="#menu" class="bg-transparent hover:bg-white hover:text-hk-dark text-white border-2 border-white px-8 py-4 rounded-full text-xl font-bold transition-all">
+                    View Menu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="offers" class="py-16 bg-hk-red relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/oriental-tiles.png');"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-2">Exclusive Set Dinners</h2>
+                <div class="w-24 h-1 bg-hk-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg p-1 border-4 border-hk-gold shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                    <div class="border border-hk-red p-6 h-full flex flex-col items-center text-center rounded bg-stone-50">
+                        <div class="bg-hk-red text-white font-bold py-1 px-4 rounded-full text-sm mb-4 uppercase tracking-widest">Best Value</div>
+                        <h3 class="font-serif text-3xl font-bold text-hk-dark mb-2">Set Dinner A</h3>
+                        <p class="text-gray-500 italic mb-4">(For 1 Person)</p>
+                        <ul class="text-gray-700 space-y-2 mb-6 text-lg font-medium">
+                            <li><i class="fa-solid fa-check text-hk-gold mr-2"></i>Sweet & Sour Pork Balls</li>
+                            <li><i class="fa-solid fa-check text-hk-gold mr-2"></i>Chicken Curry</li>
+                            <li><i class="fa-solid fa-check text-hk-gold mr-2"></i>Special Fried Rice</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <span class="block text-gray-500 text-sm">Only</span>
+                            <span class="text-5xl font-bold text-hk-red">£9.90</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-hk-dark rounded-lg p-1 border-4 border-hk-gold shadow-2xl transform hover:-translate-y-1 transition duration-300">
+                    <div class="border border-gray-600 p-6 h-full flex flex-col items-center text-center rounded bg-gray-900">
+                        <div class="bg-hk-gold text-hk-dark font-bold py-1 px-4 rounded-full text-sm mb-4 uppercase tracking-widest">Family Feast</div>
+                        <h3 class="font-serif text-3xl font-bold text-white mb-2">Set Dinner F</h3>
+                        <p class="text-gray-400 italic mb-4">(For 2 Persons)</p>
+                        <ul class="text-gray-300 space-y-2 mb-6 text-lg">
+                            <li>Sweet & Sour Pork Balls</li>
+                            <li>Beef Chop Suey</li>
+                            <li>Chicken Black Bean Sauce</li>
+                            <li>Special Fried Rice</li>
+                            <li>Prawn Crackers</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <span class="block text-gray-400 text-sm">Total</span>
+                            <span class="text-5xl font-bold text-hk-gold">£28.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-20 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-hk-red font-bold tracking-widest uppercase">Taste the difference</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-hk-dark mt-2 mb-4">Menu Highlights</h2>
+                <div class="w-16 h-1 bg-hk-red mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-hk-red">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-solid fa-fire text-hk-red text-2xl"></i>
+                        <h3 class="font-serif text-2xl font-bold text-hk-dark">Chef Specials</h3>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="flex justify-between items-start border-b border-gray-100 pb-3">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Crispy Aromatic Duck</h4>
+                                <p class="text-sm text-gray-500">Quarter (1/4)</p>
+                            </div>
+                            <span class="font-bold text-hk-red text-lg">£13.00</span>
+                        </li>
+                        <li class="flex justify-between items-start border-b border-gray-100 pb-3">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Sweet & Sour Chicken</h4>
+                                <p class="text-sm text-gray-500">Hong Kong Style</p>
+                            </div>
+                            <span class="font-bold text-hk-red text-lg">£7.80</span>
+                        </li>
+                        <li class="flex justify-between items-start border-b border-gray-100 pb-3">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Deep Fried Shredded Beef</h4>
+                                <p class="text-sm text-gray-500">Chilli sauce</p>
+                            </div>
+                            <span class="font-bold text-hk-red text-lg">£8.80</span>
+                        </li>
+                        <li class="flex justify-between items-start pb-3">
+                            <div>
+                                <h4 class="font-bold text-gray-800">King Prawn</h4>
+                                <p class="text-sm text-gray-500">Ginger & Spring Onion</p>
+                            </div>
+                            <span class="font-bold text-hk-red text-lg">£8.80</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-hk-gold">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-solid fa-utensils text-hk-gold-dark text-2xl"></i>
+                        <h3 class="font-serif text-2xl font-bold text-hk-dark">Appetisers</h3>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="flex justify-between items-start border-b border-gray-100 pb-3">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Gourmet Hors D'oeuvres</h4>
+                                <p class="text-sm text-gray-500">Min For 2 Persons</p>
+                            </div>
+                            <span class="font-bold text-hk-gold-dark text-lg">£15.80</span>
+                        </li>
+                        <li class="flex justify-between items-start border-b border-gray-100 pb-3">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Sesame Prawn on Toast</h4>
+                                <p class="text-sm text-gray-500">Crispy & Fresh</p>
+                            </div>
+                            <span class="font-bold text-hk-gold-dark text-lg">£8.00</span>
+                        </li>
+                        <li class="flex justify-between items-start border-b border-gray-100 pb-3">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Satay Chicken</h4>
+                                <p class="text-sm text-gray-500">On Skewers</p>
+                            </div>
+                            <span class="font-bold text-hk-gold-dark text-lg">£7.80</span>
+                        </li>
+                        <li class="flex justify-between items-start pb-3">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Crispy Seaweed</h4>
+                            </div>
+                            <span class="font-bold text-hk-gold-dark text-lg">£5.90</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-hk-red">
+                    <div class="flex items-center gap-3 mb-6">
+                        <i class="fa-solid fa-bowl-rice text-hk-red text-2xl"></i>
+                        <h3 class="font-serif text-2xl font-bold text-hk-dark">Rice & Noodles</h3>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="flex justify-between items-start border-b border-gray-100 pb-3">
+                            <div>
+                                <h4 class="font-bold text-gray-800">House Special Rice</h4>
+                                <p class="text-sm text-gray-500">Mixed Meats & Veg</p>
+                            </div>
+                            <span class="font-bold text-hk-red text-lg">£8.50</span>
+                        </li>
+                        <li class="flex justify-between items-start border-b border-gray-100 pb-3">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Chicken Chow Mein</h4>
+                                <p class="text-sm text-gray-500">Classic favorite</p>
+                            </div>
+                            <span class="font-bold text-hk-red text-lg">£7.50</span>
+                        </li>
+                        <li class="flex justify-between items-start border-b border-gray-100 pb-3">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Singapore Fried Rice</h4>
+                                <p class="text-sm text-gray-500">Spicy</p>
+                            </div>
+                            <span class="font-bold text-hk-red text-lg">£7.90</span>
+                        </li>
+                        <li class="flex justify-between items-start pb-3">
+                            <div>
+                                <h4 class="font-bold text-gray-800">Yeung Chow Fried Noodle</h4>
+                            </div>
+                            <span class="font-bold text-hk-red text-lg">£7.80</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="inline-flex items-center px-8 py-4 bg-gray-800 text-white font-bold rounded hover:bg-gray-700 transition">
+                    <i class="fa-solid fa-file-pdf mr-2"></i> Download Full Menu
+                </button>
+                <p class="mt-4 text-gray-500 text-sm">Food Allergies? Please inform our staff before ordering.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-white py-0">
+        <div class="flex flex-col md:flex-row h-full">
+            
+            <div class="md:w-1/2 p-12 md:p-20 bg-hk-dark text-white flex flex-col justify-center">
+                <h2 class="font-serif text-4xl font-bold mb-8 text-hk-gold">Find Us</h2>
+                
+                <div class="mb-8">
+                    <div class="flex items-start mb-4">
+                        <i class="fa-solid fa-location-dot mt-1 mr-4 text-hk-red text-2xl"></i>
+                        <div>
+                            <h4 class="font-bold text-xl">Address</h4>
+                            <p class="text-gray-300">112 Cowley Rd, Uxbridge<br>Middlesex, UB8 2LX</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fa-solid fa-phone mt-1 mr-4 text-hk-red text-2xl"></i>
+                        <div>
+                            <h4 class="font-bold text-xl">Contact</h4>
+                            <a href="tel:01895813040" class="text-2xl font-bold hover:text-hk-gold transition">01895 813040</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-700 pt-8">
+                    <h4 class="font-bold text-xl mb-4 text-hk-gold">Opening Hours</h4>
+                    <table class="w-full text-gray-300">
+                        <tr class="border-b border-gray-800">
+                            <td class="py-2">Mon, Wed, Thu, Fri, Sat</td>
+                            <td class="py-2 text-right">12pm–2pm & 5pm–9:30pm</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-2 font-bold text-red-500">Tuesday</td>
+                            <td class="py-2 text-right text-red-500 font-bold">Closed</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2">Sunday</td>
+                            <td class="py-2 text-right">5pm–9:30pm</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 h-96 md:h-auto bg-gray-200 relative">
+                <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="w-full h-full object-cover grayscale opacity-50" alt="Map Background">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="bg-white p-4 rounded shadow-lg text-center">
+                        <i class="fa-solid fa-map-location-dot text-4xl text-hk-red mb-2"></i>
+                        <p class="font-bold text-gray-800">112 Cowley Rd, Uxbridge</p>
+                        <a href="https://maps.google.com/?q=112+Cowley+Rd,Uxbridge,UB8+2LX" target="_blank" class="text-blue-600 underline text-sm">Open in Google Maps</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center gap-4 mb-4">
+                <span class="text-hk-gold"><i class="fa-solid fa-star"></i></span>
+                <span class="text-hk-gold"><i class="fa-solid fa-star"></i></span>
+                <span class="text-hk-gold"><i class="fa-solid fa-star"></i></span>
+                <span class="text-hk-gold"><i class="fa-solid fa-star"></i></span>
+                <span class="text-hk-gold"><i class="fa-solid fa-star"></i></span>
+            </div>
+            <p class="text-gray-500 mb-2">Proudly serving Uxbridge authentic Chinese cuisine.</p>
+            <p class="text-xs text-gray-600">&copy; 2023 Hong Kong Kitchen. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+                navbar.classList.add('py-0');
+            } else {
+                navbar.classList.remove('shadow-lg');
+                navbar.classList.remove('py-0');
+            }
+        });
+    </script>
+</body>
+</html>
